@@ -198,20 +198,28 @@ bindsym Mod4+o exec i3lock
 
 # Window decoration
 
+# Disabling title bars for gaps
+for_window [class="^.*"] border pixel 3
+
 # declare colors
 set $bga        #1B263B
-set $fg         #e7dfc6
+set $fg         #E7DFC6
 set $fga        #555555
 set $bg         #0D1B2A
 set $alt        #912F56
-set $wn         #9D44B5
+set $foc        #9D44B5
+set $warn       #DAB420
 
 # set some nice colors      border  background  text    indicator
-client.focused              $alt     $bg         $fg     $fga
-client.unfocused            $alt     $bga        $fg     $fga
-client.focused_inactive     $alt     $bga        $fg     $fga
-client.urgent               $alt     $wn         $fg     $fga
+client.focused              $alt     $foc        $fg     $foc
+client.unfocused            $alt     $alt        $fg     $alt
+client.focused_inactive     $alt     $alt        $fg     $alt
+client.urgent               $alt     $warn       $fg     $alt
 
+# Gaps configuration
+
+gaps inner 10
+gaps outer 10
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
