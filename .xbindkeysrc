@@ -62,6 +62,14 @@
 "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   m:0x10 + c:121
 
+# Take screenshot of region (single click to capture window)
+"import -border ~/Pictures/Screenshots/$(date +%F_%H%M%S_%N).png"
+  c:107
+
+# Take screenshot of screen
+"import -window root ~/Pictures/Screenshots/$(date +%F_%H%M%S_%N).png"
+  m:0x14 + c:107
+
 # specify a mouse button
 # "xterm"
 #  control + b:2
