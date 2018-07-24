@@ -94,9 +94,10 @@ format-prefix-underline = ${colors.secondary}
 label-layout = %layout%
 label-layout-underline = ${colors.secondary}
 
+label-indicator = !
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
+label-indicator-background = ${colors.secondary} 
 label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
@@ -105,7 +106,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted =  %{F#0a81f5}%mountpoint%%{F-} %percentage_used%%
+label-mounted =   %percentage_used%%
 label-unmounted =  %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -136,7 +137,11 @@ wrapping-scroll = false
 
 ws-icon-0 = 1| Term;
 ws-icon-1 = 2| Web;
-ws-icon-2 = 10| Chat;
+ws-icon-2 = 3| Mail;
+ws-icon-3 = 4| Watch;
+ws-icon-4 = 5| IDE;
+ws-icon-5 = 10| Chat;
+ws-icon-6 = 9| P2P;
 ws-icon-default = 
 
 ; Only show workspaces on the same output as the bar
@@ -377,7 +382,7 @@ menu-1-1 = reboot
 menu-1-1-exec = sudo reboot
 
 menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
+menu-2-0-exec = poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
